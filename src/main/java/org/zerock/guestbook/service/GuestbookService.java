@@ -4,12 +4,23 @@ import org.zerock.guestbook.dto.GuestbookDTO;
 import org.zerock.guestbook.dto.PageRequestDTO;
 import org.zerock.guestbook.dto.PageResultDTO;
 import org.zerock.guestbook.entity.Guestbook;
-import org.zerock.guestbook.repository.GuestbookRepository;
 
 public interface GuestbookService {
+
+    // 게시물 등록
     Long register(GuestbookDTO dto);
 
+    // 목록 조회 with 페이징
     PageResultDTO<GuestbookDTO, Guestbook> getList(PageRequestDTO reqDTO);
+
+    // 게시물 조회
+    GuestbookDTO read(Long gno);
+
+    // 게시물 삭제
+    void remove(Long gno);
+
+    // 게시물 수정
+    void modify(GuestbookDTO dto);
 
     // 인터페이스의 실제 구현내용을 가지는 default 메소드로 정의.
     // DTO => Entity 변환
@@ -36,4 +47,6 @@ public interface GuestbookService {
 
         return dto;
     }
+
+    //
 }

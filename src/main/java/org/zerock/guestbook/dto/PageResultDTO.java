@@ -22,7 +22,7 @@ public class PageResultDTO<DTO, EN> {
     private int totalPage; //총 페이지 번호
     private int page; //현재 페이지 번호
     private int size; // 목록 사이즈
-    private int start, end; // 시작 페이지번호, 끝 페이지 번호
+    private int start, end; // 현재 화면에서 시작 페이지번호, 끝 페이지 번호
     private boolean prev, next; //이전, 다음
     private List<Integer> pageList; //페이지 번호 목록
 
